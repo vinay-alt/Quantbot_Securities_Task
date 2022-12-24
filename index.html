@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-block">
+      <h1>Registration</h1>
+      <form>
+        <hr>
+        <div id="inputs">
+        	<select name="state" id="state" onchange="PopulateCities()">
+        		<option value="">Select State</option>
+        	</select>
+	        <select name="city" id="city">
+        		<option value="">Select City</option>
+        	</select>
+	        <input type="number" name="pincode" id="pincode" placeholder="Pincode" value="" />
+	        <input type="text" style="visibility:hidden;" name="remark" id="remark" placeholder="remark" value="" />
+        </div>
+        <hr>
+        <div class="btn-block">
+          <button type="button" onclick="Submit()">Submit</button>
+        </div>
+      </form>
+
+
+      <div id="modalwrap" class="modalwrap">
+      	<button class="CloseButton" id="CloseButton" onclick="Close()">Close</button>
+      	<div id="modal" class="modal">
+      		<p id="stateout"></p>
+      		<p id="cityout"></p>
+      		<p id="pincodeout"></p>
+      		<p style="display:none" id="remarkout"></p>
+	      </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
